@@ -15,9 +15,7 @@ const scontoAnziani = (prezzo / 100) * 40;
 
 let prezzoMinorenni = prezzo - scontoMinorenni;
 
-let prezzoAnziani = prezzo - scontoAnziani;
-
-// const eta = parseInt(prompt('quanti anni hai?'));
+let prezzoAnziani = prezzo - scontoAnziani
 
 function eta(num, min, max){
   const MIN = min || 1;
