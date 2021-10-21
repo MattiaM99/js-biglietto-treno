@@ -13,26 +13,28 @@ const scontoMinorenni = (prezzo / 100) * 20;
 
 const scontoAnziani = (prezzo / 100) * 40;
 
-let prezzoMinorenni = prezzo - scontoMinorenni;
+const prezzoMinorenni = prezzo - scontoMinorenni;
 
-let prezzoAnziani = prezzo - scontoAnziani
+const prezzoAnziani = prezzo - scontoAnziani;
 
-function eta(num, min, max){
-  const MIN = min || 1;
-  const MAX = max || 100;
-  const parsed = parseInt(num)
-  return Math.min(Math.max(parsed, MIN), MAX)
-}
+// function eta(num, min, max){
+//   const MIN = min || 1;
+//   const MAX = max || 100;
+//   const parsed = parseInt(num)
+//   return Math.min(Math.max(parsed, MIN), MAX)
+// }
 
-alert(
-  eta(prompt("quanti anni hai?"))
-)
+// alert(
+//   eta(prompt("quanti anni hai?"))
+// );
+
+const eta = parseInt(prompt('quanti anni hai?'))
 
 if (eta <= 18) {
-  document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' + prezzoMinorenni + '€';
+  document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' +prezzoMinorenni+ '€';
  } else if (eta >= 65) {
-  document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' + prezzoAnziani + '€';
+  document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' +prezzoAnziani+ '€';
  } else {
-  document.getElementById('prezzo').innerHTML = '' +  'il tuo biglietto costa='  + '' + prezzo + '€';
+  document.getElementById('prezzo').innerHTML = '' +  'il tuo biglietto costa='+prezzo+ '€';
  }
 
