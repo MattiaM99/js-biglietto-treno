@@ -17,7 +17,18 @@ let prezzoMinorenni = prezzo - scontoMinorenni;
 
 let prezzoAnziani = prezzo - scontoAnziani;
 
-const eta = parseInt(prompt('quanti anni hai?'));
+// const eta = parseInt(prompt('quanti anni hai?'));
+
+function eta(num, min, max){
+  const MIN = min || 1;
+  const MAX = max || 100;
+  const parsed = parseInt(num)
+  return Math.min(Math.max(parsed, MIN), MAX)
+}
+
+alert(
+  eta(prompt("quanti anni hai?"))
+)
 
 if (eta <= 18) {
   document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' + prezzoMinorenni + '€';
