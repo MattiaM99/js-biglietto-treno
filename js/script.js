@@ -22,7 +22,7 @@ const eta = parseInt(prompt('quanti anni hai?'));
 if (eta <= 18) {
   document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' + prezzoMinorenni + '€';
  } else if (eta >= 65) {
-  document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' + prezzoMinorenni + '€';
+  document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' + prezzoAnziani + '€';
  } else {
   document.getElementById('prezzo').innerHTML = '' +  'il tuo biglietto costa='  + '' + prezzo + '€';
  }
