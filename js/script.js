@@ -28,13 +28,14 @@ const prezzoAnziani = prezzo - scontoAnziani;
 //   eta(prompt("quanti anni hai?"))
 // );
 
-const eta = parseInt(prompt('quanti anni hai?'))
+const eta = parseInt(prompt('quanti anni hai?'));
+
 
 if (eta <= 18) {
-  document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' +prezzoMinorenni+ '€';
+  document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' +prezzoMinorenni.toFixed(2)+ '€';
  } else if (eta >= 65) {
-  document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' +prezzoAnziani+ '€';
+  document.getElementById('prezzo').innerHTML = '' + 'il tuo biglietto costa =' + '' +prezzoAnziani.toFixed(2) + '€';
  } else {
-  document.getElementById('prezzo').innerHTML = '' +  'il tuo biglietto costa='+prezzo+ '€';
+  document.getElementById('prezzo').innerHTML = '' +  'il tuo biglietto costa='  + '' + prezzo.toFixed(2) + '€';
  }
 
