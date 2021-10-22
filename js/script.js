@@ -17,6 +17,18 @@ const prezzoMinorenni = prezzo - scontoMinorenni;
 
 const prezzoAnziani = prezzo - scontoAnziani;
 
+let validData = true;
+let errorMsg = '';
+
+if (age < 1 || age > 120) {
+  validData = false;
+  errorMsg = 'Inserire una età valida';
+}
+if (isNan(age)) {
+  validData = false;
+  errorMsg = 'Inserire una età valida';
+}
+
 // function eta(num, min, max){
 //   const MIN = min || 1;
 //   const MAX = max || 100;
